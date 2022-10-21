@@ -23,7 +23,6 @@
         </div>
     </div>
 <script type="text/babel">
-  /***************************************************
     class Commentaire extends React.Component {
         render() {
           return (
@@ -100,30 +99,8 @@ return (
     )
 }
 }
-  *****************************/
- 
-  class Star extends React.Component {
-    constructor (props) {
-      super(props);
-      this.state = { on : false} 
-      this.handleClick = this.handleClick.bind(this);
-    }
 
-    handleClick() {
-      this.setState({ on : true });
-    }
-
-    render() {
-      return(
-        <img src = { this.state.on ? process.env.PUBLIC_URL + '/favourite.png':
-        process.env.PUBLIC_URL + '/star.png' }
-        onClick = { this.handleClick }
-        />
-      );
-    }
-  }
-
-ReactDOM.render(<Star />, document.getElementById("root"))
+ReactDOM.render(<App />, document.getElementById("root"))
 </script>
 
 </body>
